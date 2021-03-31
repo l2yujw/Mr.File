@@ -1,0 +1,16 @@
+﻿  0515GUI+파일방향설정.cpp
+C:\Users\09jie\Desktop\2019\자바 프로젝트\source__\파일전송\0515GUI+파일방향설정\0515GUI+파일방향설정.cpp(2): warning C4005: 'WINVER': 매크로 재정의
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.17763.0\shared\SDKDDKVer.h(237): note: 'WINVER'의 이전 정의를 참조하십시오.
+C:\Users\09jie\Desktop\2019\자바 프로젝트\source__\파일전송\0515GUI+파일방향설정\0515GUI+파일방향설정.cpp(3): warning C4005: '_WIN32_WINNT': 매크로 재정의
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.17763.0\shared\SDKDDKVer.h(216): note: '_WIN32_WINNT'의 이전 정의를 참조하십시오.
+C:\Users\09jie\Desktop\2019\자바 프로젝트\source__\파일전송\0515GUI+파일방향설정\FileShareWindow.h(137): warning C4267: '=': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\09jie\Desktop\2019\자바 프로젝트\source__\파일전송\0515GUI+파일방향설정\0515GUI+파일방향설정.cpp(39): warning C4244: 'return': 'WPARAM'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  FileShareWindow.cpp
+C:\Users\09jie\Desktop\2019\자바 프로젝트\source__\파일전송\0515GUI+파일방향설정\FileShareWindow.h(137): warning C4267: '=': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\09jie\Desktop\2019\자바 프로젝트\source__\파일전송\0515GUI+파일방향설정\FileShareWindow.cpp(26): warning C4101: 'message' :참조되지 않은 지역 변수입니다.
+C:\Users\09jie\Desktop\2019\자바 프로젝트\source__\파일전송\0515GUI+파일방향설정\FileShareWindow.cpp(27): warning C4101: 'strlen' :참조되지 않은 지역 변수입니다.
+  코드를 생성하고 있습니다.
+  Previous IPDB not found, fall back to full compilation.
+  All 22 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  코드를 생성했습니다.
+  0515GUI+파일방향설정.vcxproj -> C:\Users\09jie\Desktop\2019\자바 프로젝트\source__\파일전송\x64\Release\0515GUI+파일방향설정.exe
