@@ -1,0 +1,18 @@
+soundcloud api __ github..
+
+1. wrapper instance 변수 생성
+ApiWrapper wrapper = new ApiWrapper("client_id", "client_secret", null, null);
+
+2. 아이디 비밀번호 받기
+wrapper.login("username", "password");
+
+3. 요청 실행
+HttpResponse resp = wrapper.get(Request.to("/me"));
+
+4. 자원 업데이트..?
+HttpResponse resp =
+      wrapper.put(Request.to("/me")
+             .with("user[full_name]", "Che Flute",
+                   "user[website]",   "http://cheflute.com")
+             .withFile("user[avatar_data]", new File("flute.jpg")));
+

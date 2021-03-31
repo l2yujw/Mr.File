@@ -1,0 +1,10 @@
+﻿  server.cpp
+C:\Users\PC\Downloads\server.cpp(8): warning C4005: '_CRT_SECURE_NO_WARNINGS': 매크로 재정의
+  C:\Users\PC\Downloads\server.cpp: note: '_CRT_SECURE_NO_WARNINGS'의 이전 정의를 참조하십시오.
+C:\Users\PC\Downloads\server.cpp(11): warning C4005: '_WIN32_WINNT': 매크로 재정의
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.17763.0\shared\sdkddkver.h(216): note: '_WIN32_WINNT'의 이전 정의를 참조하십시오.
+  코드를 생성하고 있습니다.
+  Previous IPDB not found, fall back to full compilation.
+  All 9 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  코드를 생성했습니다.
+  0430서버클라이언트테스트컴퓨터1.vcxproj -> C:\Users\PC\source\repos\0430서버클라이언트테스트컴퓨터1\Release\0430서버클라이언트테스트컴퓨터1.exe
