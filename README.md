@@ -69,7 +69,6 @@
 ![image](https://user-images.githubusercontent.com/48430781/113152058-b2483080-9270-11eb-8141-6425e9d20775.png)
 
 ### 견본이미지
-![image](https://user-images.githubusercontent.com/48430781/113153663-49fa4e80-9272-11eb-8b84-77ce2c3d09b7.png)
 ![image](https://user-images.githubusercontent.com/48430781/113251582-7effb300-92fd-11eb-9cfd-dbe884219b6e.png)
 ![image](https://user-images.githubusercontent.com/48430781/113251592-84f59400-92fd-11eb-9a2f-1c0eaaf82a76.png)
 
