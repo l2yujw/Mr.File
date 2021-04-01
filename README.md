@@ -3,6 +3,8 @@
 - 'Motion Recognition' demo using FILE transmission
 - 2019 수원대학교 정보보호학과 2학년 자바 프로젝트 
 
+![image](https://user-images.githubusercontent.com/48430781/113251366-1f090c80-92fd-11eb-8ac1-9a9b7851785c.png)
+
 ### 개요
 
  - 아이디어 상의 중 마우스를 쥘 수 없는 환경에 있거나, 손가락을 자유자재로 움직일 수 없는 사람들이 컴퓨터를 사용할 때 불편할 수 있다는 문제점에 대해 생각을 하게 됨.
@@ -50,7 +52,8 @@
 
     - 일정 각도보다 커질 경우에 클릭 상태를 해제한다.
 
- 
+ ![image](https://user-images.githubusercontent.com/48430781/113251350-19132b80-92fd-11eb-9be5-d48e9a5333ce.png)
+![image](https://user-images.githubusercontent.com/48430781/113251355-1c0e1c00-92fd-11eb-9d96-855daf84004f.png)
 
 ### 개발 언어와 도구
 
@@ -67,5 +70,6 @@
 
 ### 견본이미지
 ![image](https://user-images.githubusercontent.com/48430781/113153663-49fa4e80-9272-11eb-8b84-77ce2c3d09b7.png)
-![image](https://user-images.githubusercontent.com/48430781/113153401-043d8600-9272-11eb-86a4-ce55c235b3f7.png)
- 
+![image](https://user-images.githubusercontent.com/48430781/113251582-7effb300-92fd-11eb-9cfd-dbe884219b6e.png)
+![image](https://user-images.githubusercontent.com/48430781/113251592-84f59400-92fd-11eb-9a2f-1c0eaaf82a76.png)
+
