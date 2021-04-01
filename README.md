@@ -31,6 +31,10 @@
     방향별로 존재하는 Adapter에 각각 다른 사용자를 설정한다.
 
     Drag & Drop을 통하여 파일을 잡고, Adapter로 Drop 시키면 파일이 전송된다.
+    
+![image](https://user-images.githubusercontent.com/48430781/113252323-a73be180-92fe-11eb-9c8d-e55a82b55c65.png)
+
+
 
  2) TCP를 이용한 파일전송
 
@@ -54,8 +58,6 @@
 
  ![image](https://user-images.githubusercontent.com/48430781/113251350-19132b80-92fd-11eb-9be5-d48e9a5333ce.png)
 ![image](https://user-images.githubusercontent.com/48430781/113251355-1c0e1c00-92fd-11eb-9d96-855daf84004f.png)
-
-![image](https://user-images.githubusercontent.com/48430781/113252323-a73be180-92fe-11eb-9c8d-e55a82b55c65.png)
 
 
 ### 개발 언어와 도구
