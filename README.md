@@ -3,6 +3,8 @@
 - 'Motion Recognition' demo using FILE transmission
 - 2019 수원대학교 정보보호학과 2학년 자바 프로젝트 
 
+![image](https://user-images.githubusercontent.com/48430781/113251366-1f090c80-92fd-11eb-8ac1-9a9b7851785c.png)
+
 ### 개요
 
  - 아이디어 상의 중 마우스를 쥘 수 없는 환경에 있거나, 손가락을 자유자재로 움직일 수 없는 사람들이 컴퓨터를 사용할 때 불편할 수 있다는 문제점에 대해 생각을 하게 됨.
@@ -29,6 +31,10 @@
     방향별로 존재하는 Adapter에 각각 다른 사용자를 설정한다.
 
     Drag & Drop을 통하여 파일을 잡고, Adapter로 Drop 시키면 파일이 전송된다.
+    
+![image](https://user-images.githubusercontent.com/48430781/113252323-a73be180-92fe-11eb-9c8d-e55a82b55c65.png)
+
+
 
  2) TCP를 이용한 파일전송
 
@@ -50,7 +56,9 @@
 
     - 일정 각도보다 커질 경우에 클릭 상태를 해제한다.
 
- 
+ ![image](https://user-images.githubusercontent.com/48430781/113251350-19132b80-92fd-11eb-9be5-d48e9a5333ce.png)
+![image](https://user-images.githubusercontent.com/48430781/113251355-1c0e1c00-92fd-11eb-9d96-855daf84004f.png)
+
 
 ### 개발 언어와 도구
 
@@ -66,6 +74,6 @@
 ![image](https://user-images.githubusercontent.com/48430781/113152058-b2483080-9270-11eb-8141-6425e9d20775.png)
 
 ### 견본이미지
-![image](https://user-images.githubusercontent.com/48430781/113153663-49fa4e80-9272-11eb-8b84-77ce2c3d09b7.png)
-![image](https://user-images.githubusercontent.com/48430781/113153401-043d8600-9272-11eb-86a4-ce55c235b3f7.png)
- 
+![image](https://user-images.githubusercontent.com/48430781/113251582-7effb300-92fd-11eb-9cfd-dbe884219b6e.png)
+![image](https://user-images.githubusercontent.com/48430781/113251592-84f59400-92fd-11eb-9a2f-1c0eaaf82a76.png)
+

@@ -31,7 +31,7 @@ def isPointClose(x1,y1,x2,y2,scale):
         return False;
     
 #if __name__ == "__main__":
-cap=cv2.VideoCapture(0);    #'http://192.168.0.101:4747/mjpegfeed'); cap에 비디오 캡쳐도구 저장
+cap=cv2.VideoCapture(0);    # cap에 비디오 캡쳐도구 저장
 bg=cv2.flip(cap.read()[1],1);   #카메라 좌우반전
 w=np.shape(bg)[1];  #차원 설정
 h=np.shape(bg)[0];
@@ -41,7 +41,7 @@ app=wx.App(False);
 ########################
 
 #font = cv2.FONT_HERSHEY_SIMPLEX;
-#low_range=np.array([123,112,4]);      #hand color thresholds
+#low_range=np.array([123,112,4]);
 #high_range=np.array( [250,180,124]);
 
 ########################
@@ -70,7 +70,7 @@ while True:
     gr_frame=cv2.blur(gr_frame,(10,10));
     bw_frame=cv2.threshold(gr_frame,50,255,0)[1];
     
-    ############ Tracking the hand contour 손 인식하는 것을 보여주는 코딩 ################
+    ############ Tracking the hand contour ################
     
     con=cv2.findContours(bw_frame,cv2.RETR_EXTERNAL,cv2.CHAIN_APPROX_SIMPLE)[0];
     try:
@@ -100,7 +100,7 @@ while True:
             x1=topmost[0];y1=topmost[1];
             x2=bottommost[0]+20;y2=bottommost[1];
             x3=leftmost[0];y3=leftmost[1];
-            m1=(y2-y1)/(x2-x1) #여기오류
+            m1=(y2-y1)/(x2-x1) 
             m2=(y3-y2)/(x3-x2)
             tan8=math.fabs((m2-m1)/(1+m1*m2));
             angle=math.atan(tan8)*180/math.pi;
