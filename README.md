@@ -1,7 +1,8 @@
 #  Mr. FILE
 
 - 'Motion Recognition' demo using FILE transmission
-- 2019 수원대학교 정보보호학과 2학년 자바 프로젝트 
+- 2019 수원대학교 정보보호학과 2학년 자바 프로젝트
+- 역할: virtual mouse 기능 구현
 
 ### 개요
 
