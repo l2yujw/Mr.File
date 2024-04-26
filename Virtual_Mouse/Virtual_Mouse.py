@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Jan 16 23:58:20 2018
-
-@author: Sourav
-"""
-
 import cv2
 import mouse
 import numpy as np
@@ -22,7 +15,7 @@ def sekil_ciz(event, x, y, flags, param):
         ix, iy = x, y
     elif event == cv2.EVENT_LBUTTONUP:
         x,y
-#function to reduce flickering
+
 def isPointClose(x1,y1,x2,y2,scale):
     d=math.sqrt((x1-x2)**2+(y1-y2)**2);
     if d<=scale:     #length<=scale?
@@ -38,13 +31,6 @@ h=np.shape(bg)[0];
 bg=bg[1:h-199,250:w].copy();
 app=wx.App(False);
 (sx,sy)=wx.GetDisplaySize();    #디스플레이 사이즈 sx,sy 저장
-########################
-
-#font = cv2.FONT_HERSHEY_SIMPLEX;
-#low_range=np.array([123,112,4]);      #hand color thresholds
-#high_range=np.array( [250,180,124]);
-
-########################
 
 mouseOn=0;
 while True:
@@ -70,7 +56,7 @@ while True:
     gr_frame=cv2.blur(gr_frame,(10,10));
     bw_frame=cv2.threshold(gr_frame,50,255,0)[1];
     
-    ############ Tracking the hand contour 손 인식하는 것을 보여주는 코딩 ################
+    ############ 손 인식하는 것을 보여주는 코딩 ################
     
     con=cv2.findContours(bw_frame,cv2.RETR_EXTERNAL,cv2.CHAIN_APPROX_SIMPLE)[0];
     try:
@@ -96,11 +82,11 @@ while True:
             cv2.circle(roi,topmost,5,(255,0,0),-1);
             cv2.circle(roi,leftmost,5,(0,120,255),-1);
             cv2.circle(roi,(temp,bottommost[1]),5,(230,0,255),-1);
-            ###################### angle calculate #####################
+            ###################### 각도계산 #####################
             x1=topmost[0];y1=topmost[1];
             x2=bottommost[0]+20;y2=bottommost[1];
             x3=leftmost[0];y3=leftmost[1];
-            m1=(y2-y1)/(x2-x1) #여기오류
+            m1=(y2-y1)/(x2-x1)
             m2=(y3-y2)/(x3-x2)
             tan8=math.fabs((m2-m1)/(1+m1*m2));
             angle=math.atan(tan8)*180/math.pi;
@@ -113,9 +99,7 @@ while True:
             
             if length<50:
                 continue
-            
-            ################### get original pixel location #############
-            
+                        
             x=sx-((topmost[0]-50)*sx/(w-340));
             y=(topmost[1]*sy/(h-281));
             mouse.move(sx-x,y,absolute=True, duration=.1);
@@ -124,8 +108,7 @@ while True:
             cv2.putText(roi,str('%d,%d'%(sx-x,y)),topmost, cv2.FONT_HERSHEY_SIMPLEX, .5,(255,255,255),1,cv2.LINE_AA)
             #################### Clicking the mouse ########################
             if angle<15:#손가락 사이 각 체크
-                mouse.press(button='left'); # uncomment to activate the left click
-                #mouse.double_click(button='left');     #doubleclick
+                mouse.press(button='left'); 
                 print('left clicked');          # 유지후에도 움직이는가?
                 pass
             else:
@@ -143,7 +126,7 @@ while True:
         bg=temp_roi;
     elif cv2.waitKey(2)==32:    #스페이스바 2초누르면 종료
         break;
-#%%############# Releasing the resources ##############
+
 cv2.destroyAllWindows();
 cap.release();
 
