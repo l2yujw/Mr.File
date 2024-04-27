@@ -55,13 +55,29 @@
 
 ### 개발 언어와 도구
 
- 1) UI : Java (eclipse)
+ 1) UI : Java (IntelliJ)
 
- 2) server & client : Window API 소켓 프로그래밍을 이용, C++ (visual studio)
+ 2) server & client : Window API 소켓 프로그래밍을 이용, C++ (Visual Studio)
 
- 3) motion recognition : python, open cv와 연동 (pycharm)
+ 3) motion recognition : python , open cv와 연동 (Pycharm)
 
- 
+### 버전 세팅
+
+- Python (3.9)
+- numpy (1.26.4)
+- app (0.0.1)
+- wxPython (4.2.1)
+
+- opencv 설치 (4.9.0.80)
+```
+python -m pip install --upgrade pip
+python install opencv-python
+```
+
+- pynput 설치 (1.7.6)
+```
+pip install pynput
+```
 
 ### UI 소개
 ![image](https://user-images.githubusercontent.com/48430781/113152058-b2483080-9270-11eb-8141-6425e9d20775.png)
