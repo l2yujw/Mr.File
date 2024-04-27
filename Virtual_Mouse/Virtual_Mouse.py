@@ -13,7 +13,7 @@ except:
 mouse = Controller()
 
 cap = cv2.VideoCapture(0)
-bg = cv2.flip(cap.read()[1], 1)  # 카메라 좌우반전
+bg = cv2.flip(cap.read()[1], 1)  # 카메라 좌우 반전
 w = np.shape(bg)[1]  # 차원 설정
 h = np.shape(bg)[0]
 bg = bg[1:h - 199, 250:w].copy()
@@ -37,13 +37,13 @@ while True:
     mask1 = cv2.erode(mask1, cv2.getStructuringElement(cv2.MORPH_ERODE, (2, 2)), iterations=2)
     cv2.imshow('mask1', mask1)  # mask 창 보여주기 검정 하양으로 인식하고 있는 것을 보여줌
     fg_frame = cv2.bitwise_and(roi, roi, mask=mask1)
-    cv2.imshow('fg_frame', fg_frame)  # fg_frame 창 보여주기 인식하고 있는 사물을 제외한 모든 곳을 검정색으로 보여줌
+    cv2.imshow('fg_frame', fg_frame)  # fg_frame 창 보여주기 > 인식하고 있는 사물을 제외한 모든 곳을 검정으로 보여줌
 
     gr_frame = cv2.cvtColor(fg_frame, cv2.COLOR_BGR2GRAY)
     gr_frame = cv2.blur(gr_frame, (10, 10))
     bw_frame = cv2.threshold(gr_frame, 50, 255, 0)[1]
 
-    ############ 손 인식하는 것을 보여주는 코딩 ################
+    # 사물 인식 코딩
 
     con = cv2.findContours(bw_frame, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)[0]
     try:
@@ -61,14 +61,15 @@ while True:
             topmost = tuple(hull[hull[:, :, 1].argmin()][0])
             bottommost = tuple(my_con[my_con[:, :, 1].argmax()][0])
 
-            temp = bottommost[0] + 30  # getting the bottom middle of the hand
+            temp = bottommost[0] + 30
             cv2.line(roi, topmost, (topmost[0], h - 280), (0, 242, 225), 2)
             cv2.line(roi, leftmost, (topmost[0], bottommost[1] - 80), (0, 242, 225), 2)
 
             cv2.circle(roi, topmost, 5, (255, 0, 0), -1)
             cv2.circle(roi, leftmost, 5, (0, 120, 255), -1)
             cv2.circle(roi, (temp, bottommost[1]), 5, (230, 0, 255), -1)
-            ###################### 각도계산 #####################
+
+            # 각도 계산
             x1 = topmost[0]
             y1 = topmost[1]
             x2 = bottommost[0] + 20
@@ -79,11 +80,8 @@ while True:
             m2 = (y3 - y2) / (x3 - x2)
             tan8 = math.fabs((m2 - m1) / (1 + m1 * m2))
             angle = math.atan(tan8) * 180 / math.pi
-            ############################################################
 
-            # angle = math.atan2(y2 - y1, x2 - x1) * 180.0 / math.pi;
             length = math.sqrt(math.pow((y2 - y1), 2) + math.pow((x2 - x1), 2))
-            # print(angle);
 
             if length < 50:
                 continue
@@ -92,11 +90,11 @@ while True:
             y = (topmost[1] * sy / (h - 281))
             mouse.position = (sx - x, y)
 
-            cv2.putText(roi, str('%d,%d' % (sx - x, y)), topmost, cv2.FONT_HERSHEY_SIMPLEX, .5, (255, 255, 255), 1, cv2.LINE_AA)
-            #################### Clicking the mouse ########################
+            cv2.putText(roi, str('%d,%d' % (sx - x, y)), topmost, cv2.FONT_HERSHEY_SIMPLEX, .5, (255, 255, 255), 1,
+                        cv2.LINE_AA)
+
             if angle < 15:  # 손가락 사이 각 체크
                 mouse.press(Button.left)
-                print('left clicked')  # 유지후에도 움직이는가?
                 pass
             else:
                 mouse.release(Button.left)
